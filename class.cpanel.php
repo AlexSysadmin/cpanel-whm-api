@@ -23,7 +23,7 @@ class Cpanel
 
     }
 
-    /*
+     /*
      *
      * Cpanel version 2 API EXAMPLE
      * $cpanel->runQuery('2', 'cpanel', array(
@@ -73,7 +73,7 @@ class Cpanel
         $options = array_merge($options_extra,$options);
         $fi = http_build_query($options);
         $query = $this->host.'/json-api/'.$action.'?'.$fi;
-//        echo $query;
+        //   echo $query;
         $header = array();
         if ('hash' == $this->auth_type) {
             $header[] = 'Authorization: WHM ' . $this->username . ':' . preg_replace("'(\r|\n|\s|\t)'", '', $this->password);
